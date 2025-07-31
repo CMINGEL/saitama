@@ -109,6 +109,7 @@ function AllWordsTable({ hashWords, groupIndex }: AllWordsTableType) {
           .filter(word => hashWords.includes(word.id))
           .map(word => {
             const studied = studiedHashWords?.includes(word.id)
+            console.log(studiedHashWords.length)
             return (
               <tr
                 key={word.id}
