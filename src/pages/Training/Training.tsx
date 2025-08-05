@@ -68,10 +68,12 @@ export default function Training() {
       }
       return out
     }, [])
+
     if (orderTypeEstablished !== 0) {
       dispatch(setStudiedhashWords(wordStudiedOutGroup))
       setShowResult(false)
-      navigate(`/training/group/${groupId}/word/${groupWords[0]._i}`, { replace: true })
+      // navigate(`/training/group/${groupId}/word/${groupWords[0]._i}`, { replace: true })
+      navigate(`/training/`, { replace: true })
     } else {
       setRunAutomaticTime(false)
       showMsgSuccess('info.allWordsStudied').then(() => {
